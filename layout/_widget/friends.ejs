@@ -1,0 +1,11 @@
+<% if (theme.friends && theme.friends.list && Object.keys(theme.friends.list).length > 0) { %>
+  <div class="sidebar-module">
+    <h4><%= theme.friends.title %></h4>
+    <ul>
+      <% Object.keys(theme.friends.list).forEach(function(key, i) { %>
+        <% var value = theme.friends.list[key]; %>
+        <li><a href="<%= value %>"><%= key %></a></li>
+      <% }) %>
+    </ul>
+  </div>
+<% } %>

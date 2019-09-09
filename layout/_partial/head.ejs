@@ -29,7 +29,7 @@
     <link rel="icon" href="<%- url_for(theme.favicon) %>">
   <% } %>
   <% if (config.highlight.enable){ %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="//fonts.lug.ustc.edu.cn/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <% } %>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -38,4 +38,11 @@
 
   <%- css('css/styles') %>
   <%- partial('google-analytics') %>
+
+  <link rel="canonical" href="<%= url %>" />
+  <script type="text/javascript">
+    var host = "<%= config._url %>";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+      window.location.protocol = "https:";
+  </script>
 </head>
